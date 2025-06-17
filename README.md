@@ -6,7 +6,7 @@ I'm Hangry is a web application designed to help users find food options based o
 ## Installation Instructions
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/im-hangry.git
+   git clone https://github.com/adem1109/im-hangry.git
    ```
 2. Navigate to the project directory:
    ```bash
