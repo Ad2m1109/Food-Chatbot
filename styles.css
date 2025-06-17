@@ -1,48 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #f59e0b;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-image: url('templets/background.jpg'); /* Path to your background image */
-    background-size: cover; /* Cover the entire background */
-    background-position: center; /* Center the background image */
-    margin: 0;
-    padding: 0; /* Remove padding from body */
-    height: 100vh; /* Full height of the viewport */
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    color: rgba(255, 255, 255, 0.822); /* Change text color for better visibility */
-}
-
-.container {
-    max-width: 600px;
-    margin: auto;
-    background: rgba(0, 0, 0, 0.8); /* Semi-transparent white background for readability */
-    opacity: 0.8;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    text-align: center;
-}
-
-input {
-    width: calc(100% - 22px);
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #000000;
-    color: rgb(177, 127, 0);
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #218838;
+    @apply min-h-screen bg-gray-900 bg-opacity-50 flex items-center justify-center;
+    background-image: url('images/background.jpg'), url('https://images.unsplash.com/photo-1543353071-873f17a7a088?fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }

@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
     <title>Food Chatbot</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
-<body>
-    <div class="container">
-        <h1>Food Chatbot</h1>
-        <input type="text" id="userInput" placeholder="Enter an ingredient...">
-        <button onclick="sendQuery()">Ask</button>
-        <div id="response"></div>
+<body class="min-h-screen" aria-hidden="true">
+    <div class="container max-w-2xl mx-auto bg-black bg-opacity-85 p-6 rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold text-white text-center mb-6">Food Chatbot</h1>
+        <div class="mb-4">
+            <label for="userInput" class="block text-sm font-medium text-gray-300 mb-2">Enter an ingredient (e.g., chicken):</label>
+            <input type="text" id="userInput" placeholder="e.g., chicken" class="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-500">
+        </div>
+        <button onclick="sendQuery()" class="w-full p-3 bg-gray-800 text-amber-500 font-bold rounded-md hover:bg-green-700 hover:text-white transition-colors">Get Recipes</button>
+        <div id="loader" class="loader hidden"></div>
+        <div id="response" class="mt-6 max-h-[60vh] overflow-y-auto"></div>
     </div>
 </body>
 </html>
