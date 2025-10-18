@@ -1,4 +1,4 @@
-const API_KEY = 'AIzaSyC0_zp5QfbSOmZUjgeQwyT60jYXV9ha37o';
+const API_KEY = 'AIzaSyDu7ljsGsnXgBW4Q_X_b_JSoQgsfG3em-c';
 const URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${API_KEY}`;
 
 // Initialize IndexedDB
